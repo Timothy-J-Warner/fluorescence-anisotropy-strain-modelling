@@ -1,4 +1,4 @@
-# Fluorescence Anisotropy vs True Strain Modelling
+# Tool for modelling relationship between fluorescence anisotropy and true strain in polymer films
 
 ## Table of Contents
 
@@ -14,9 +14,10 @@
 
 ## About The Project
 
-The project contains two scripts used to generate plots for the publication "Effect of luminescent nanocrystal 
-alignment on fluorescence anisotropy and light guiding in polymer films". One is a script to model fluorescence
-anisotropy vs true strain data with an exponential model the other models the same data with a series of linear models.
+The project contains two scripts used to model the relationship between fluorescence anisotropy and true strain in 
+polymer films containing fluorescent nanorods, for the publication "Effect of luminescent nanocrystal alignment on 
+fluorescence anisotropy and light guiding in polymer films". One is a script to model fluorescence anisotropy vs true 
+strain data with an exponential model and the other models the same data with a series of linear models.
 
 ## Publication Details
 
