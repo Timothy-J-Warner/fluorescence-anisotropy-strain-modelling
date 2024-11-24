@@ -15,7 +15,7 @@
 
 The project contains two scripts used to generate plots for the publication "Effect of luminescent nanocrystal 
 alignment on fluorescence anisotropy and light guiding in polymer films". One is a script to model fluorescence
-anisotropy vs true strain data with an exponential model the other models the same data with a series of linear models
+anisotropy vs true strain data with an exponential model the other models the same data with a series of linear models.
 
 ### Built With
 
@@ -30,11 +30,11 @@ anisotropy vs true strain data with an exponential model the other models the sa
 
 ### Prerequisites
 
-Python 3.7+
-numpy
-pandas
-matplotlib
-scipy
+- Python 3.7+
+- numpy
+- pandas
+- matplotlib
+- scipy
 
 ### Installation
 
