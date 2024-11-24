@@ -14,15 +14,16 @@
 
 ## About The Project
 
-The project contains two scripts used to model the relationship between fluorescence anisotropy and true strain in 
-polymer films containing fluorescent elongated nanoplatelets, for the publication "Effect of luminescent nanocrystal 
-alignment on fluorescence anisotropy and light guiding in polymer films". One is a script to model fluorescence 
-anisotropy vs true strain data with an exponential model and the other models the same data with a series of linear 
-models.
-\
-\
 Please cite "Effect of luminescent nanocrystal alignment on fluorescence anisotropy and light guiding in polymer films"
 when using this tool.
+\
+\
+The project contains two scripts used to model the relationship between fluorescence anisotropy and true strain in 
+polymer films containing fluorescent nanoplatelets. It was developed for the publication "Effect of 
+luminescent nanocrystal alignment on fluorescence anisotropy and light guiding in polymer films". One is a script to 
+model fluorescence anisotropy vs true strain data with an exponential model and the other models the same data with a 
+series of linear models.
+
 
 ## Publication Details
 
@@ -58,7 +59,6 @@ Access the project and releases on GitHub at https://github.com/Timothy-J-Warner
 
 - Modify strain_vs_anisotropy_data.csv
 - Run scripts
-- Adjust upper_limit and lower_limit in exponential_model.py based on the printed confidence levels if required.
 
 ## Licence
 

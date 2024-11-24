@@ -42,21 +42,23 @@ dof = max(0, n - p)  # number of degrees of freedom
 # student-t value for the dof and confidence level
 tval = t.ppf(1.0-alpha/2., dof)
 
-# determine model values and upper and lower confidence levels
-for i, p,var in zip(range(n), popt, np.diag(pcov)):
-    sigma = var**0.5
-    print('p{0}: {1} [{2}  {3}]'.format(i, p,
-                                  p - sigma*tval,
-                                  p + sigma*tval)
-          )
+# List to store confidence intervals
+confidence_intervals = []
+
+# Calculate confidence intervals
+for i, (p, var) in enumerate(zip(popt, np.diag(pcov))):
+    sigma = var**0.5  # Standard deviation
+    lower_bound = p - sigma * tval
+    upper_bound = p + sigma * tval
+    confidence_intervals.append((lower_bound, upper_bound))
+
 
 # create the exponential model plot
-# NOTE: adjust upper_limit and lower_limit based on the printed confidence levels
 fig1 = plt.figure(layout="constrained")
 points, = plt.plot(strain, polarisation, 's', c='k', label='Exponential Fit')
 exp_trend = plt.plot(x, func(x, *popt), '--', c='r')
-upper_limit = plt.plot(x, func(x, 0.44925531190758317, 1.1192184124173044, 0.5762241234694827), ':', c='r')
-lower_limit = plt.plot(x, func(x, 0.3420948941953339, 1.1192184124173044, 0.45550419861548597), ':', c='r')
+upper_limit = plt.plot(x, func(x, confidence_intervals[0][1], popt[1], confidence_intervals[2][1]), ':', c='r')
+lower_limit = plt.plot(x, func(x, confidence_intervals[0][0], popt[1], confidence_intervals[2][0]), ':', c='r')
 
 plt.xlabel('True Strain')
 plt.ylabel('Fluorescence Anisotropy')
