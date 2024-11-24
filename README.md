@@ -46,7 +46,7 @@ Trevor A. Smith, Kenneth P. Ghiggino*, and Gary Rosengarten
 
 ### Installation
 
-Access the project and releases on GitHub at https://github.com/Timothy-J-Warner/fluorescence-anisotropy-strain-modelling
+Access the project and releases on GitHub at https://github.com/Timothy-J-Warner/fluorescence-anisotropy-vs-strain-modelling
 
 ## Usage
 
