@@ -15,7 +15,7 @@
 ## About The Project
 
 The project contains two scripts used to model the relationship between fluorescence anisotropy and true strain in 
-polymer films containing fluorescent nanoplatelets. It was developed for the publication "Effect of 
+polymer films containing fluorescent nanocrystals. It was developed for the publication "Effect of 
 luminescent nanocrystal alignment on fluorescence anisotropy and light guiding in polymer films". One is a script to 
 model fluorescence anisotropy vs true strain data with an exponential model and the other models the same data with a 
 series of linear models.
@@ -26,10 +26,14 @@ when using this tool.
 
 ## Publication Details
 
-- Title:"Effect of luminescent nanocrystal alignment on fluorescence anisotropy and light guiding in polymer films"
-- Authors: Timothy Warner, Michael Rinaudo, Yang Xu, Jiho Han, Arun Ashokan, Nicholas Kirkwood, Asaph Widmer-Cooper, 
+Title:"Effect of luminescent nanocrystal alignment on fluorescence anisotropy and light guiding in polymer films"
+\
+\
+Authors: Timothy Warner, Michael Rinaudo, Yang Xu, Jiho Han, Arun Ashokan, Nicholas Kirkwood, Asaph Widmer-Cooper, 
 Trevor A. Smith, Kenneth P. Ghiggino*, and Gary Rosengarten
-- Corresponding Author: Kenneth P. Ghiggino (ghiggino@unimelb.edu.au)
+\
+\
+Corresponding Author: Kenneth P. Ghiggino (ghiggino@unimelb.edu.au)
 
 ### Built With
 
