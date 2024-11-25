@@ -7,7 +7,14 @@ from scipy import stats
 plt.rcParams.update({'font.size': 14})
 
 # import input data
-plot_data = pd.read_csv('strain_vs_anisotropy_data.csv')
+try:
+    plot_data = pd.read_csv('strain_vs_anisotropy_data.csv')
+except FileNotFoundError:
+    print("Error: CSV file not found.")
+    exit()
+except pd.errors.EmptyDataError:
+    print("Error: CSV file is empty or improperly formatted.")
+    exit()
 
 # convert input data to numpy arrays
 strain = plot_data['Strain'].to_numpy()
@@ -58,7 +65,7 @@ for i in range(2, np.size(strain)):
     residual_nonlin = polarisation[i:np.size(polarisation)] - (lin_reg.slope * strain[i:np.size(strain)] +
                                                                lin_reg.intercept)
 
-    res_lin_points, = plt.plot(strain_lin, residual_lin, 's', c='k', label='Linear Range')
+    res_lin_points, = plt.plot(strain_lin, residual_lin, 's', c='k')
 
     plt.xlabel('True Strain')
     plt.ylabel('Residual')
@@ -68,17 +75,22 @@ for i in range(2, np.size(strain)):
     plt.savefig(f'linear_outputs/svg_files/residuals_{i}.svg', dpi=300)
 
     plt.close()
+    print(f'\nLinear modelling result saved as "linear_model_{i}.jpg/.svg".'
+          f'\nResidual result saved as "residual_{i}.jpg/.svg".'
+          )
 
 # create R2 plot
 fig3 = plt.figure(layout="constrained")
 
-R2_points, = plt.plot(strain[1: 8], data_r2, 's', c='k', label='Linear Range')
+R2_points, = plt.plot(strain[1:(len(strain)-1)], data_r2, 's', c='k')
 
 plt.xlabel('Linear Approximation Range')
 plt.ylabel(u'R\u00b2')
-plt.xlim(0, 1.895)
+plt.xlim(0, max(strain) * 1.1)
 plt.savefig(f'linear_outputs/jpg_files/r2_plot.jpg', dpi=300)
 plt.savefig(f'linear_outputs/svg_files/r2_plot.svg')
+
+print(u'\nR\u00b2 plot saved as "r2_plot.csv/.svg".')
 
 # save linear regression data
 data_set = {'Slope': data_slope, 'Intercept': data_intercept, 'R2': data_r2
@@ -87,3 +99,7 @@ data_set = {'Slope': data_slope, 'Intercept': data_intercept, 'R2': data_r2
 regression_data = pd.DataFrame(data=data_set)
 
 regression_data.to_csv('linear_outputs/linear_regression_data.csv', index=False)
+
+print('\nLinear regression data saved as "linear_regression_data.csv".')
+
+print('\nLinear modelling results saved in directory "linear_outputs".')

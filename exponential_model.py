@@ -2,13 +2,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from scipy.optimize import curve_fit
-from scipy.stats.distributions import t
+from scipy.stats import t
 
 # set font size
 plt.rcParams.update({'font.size': 14})
 
 # import input data
-plot_data = pd.read_csv('strain_vs_anisotropy_data.csv')
+try:
+    plot_data = pd.read_csv('strain_vs_anisotropy_data.csv')
+except FileNotFoundError:
+    print("Error: 'strain_vs_anisotropy_data.csv' not found.")
+    exit()
+except pd.errors.EmptyDataError:
+    print("Error: The CSV file is empty or improperly formatted.")
+    exit()
 
 # convert input data to numpy arrays
 strain = plot_data['Strain'].to_numpy()
@@ -24,7 +31,11 @@ initial_guess = [0.25, 0.01, 0.5]
 maxfev = 800
 
 # calculate non-linear regression
-popt, pcov = curve_fit(func, strain, polarisation, p0=initial_guess, bounds=parameter_bounds, maxfev=maxfev)
+try:
+    popt, pcov = curve_fit(func, strain, polarisation, p0=initial_guess, bounds=parameter_bounds, maxfev=maxfev)
+except RuntimeError as e:
+    print(f"Error during curve fitting: {e}")
+    exit()
 residuals = polarisation - func(strain, *popt)
 ss_res = np.sum(residuals ** 2)
 ss_tot = np.sum((polarisation - np.mean(polarisation)) ** 2)
@@ -83,7 +94,7 @@ df_outputs.to_csv(f"exponential_outputs/exponential_model_parameters.csv", index
 fig2 = plt.figure(layout="constrained")
 
 residual = polarisation - func(strain, *popt)
-res_points, = plt.plot(strain, residual, 's', c='k', label='Linear Range')
+res_points, = plt.plot(strain, residual, 's', c='k')
 
 
 plt.xlabel('True Strain')
@@ -94,3 +105,11 @@ plt.savefig(f'exponential_outputs/jpg_files/residuals.jpg', dpi=300)
 plt.savefig(f'exponential_outputs/svg_files/residuals.svg')
 
 plt.close()
+
+print(f'\nExponential modelling result saved as "exponential_model.jpg/.svg".'
+      f'\nResidual result saved as "residual.csv/.svg".'
+      )
+
+print('\nModel parameters saved as "exponential_model_parameters.csv".')
+
+print('\nExponential modelling results saved in directory "exponential_outputs".')
