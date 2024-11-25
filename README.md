@@ -26,7 +26,7 @@ when using this tool.
 
 ## Publication Details
 
-Title:"Effect of luminescent nanocrystal alignment on fluorescence anisotropy and light guiding in polymer films"
+Title: "Effect of luminescent nanocrystal alignment on fluorescence anisotropy and light guiding in polymer films"
 \
 \
 Authors: Timothy Warner, Michael Rinaudo, Yang Xu, Jiho Han, Arun Ashokan, Nicholas Kirkwood, Asaph Widmer-Cooper, 
