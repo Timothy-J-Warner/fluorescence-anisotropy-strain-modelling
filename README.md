@@ -19,20 +19,17 @@ polymer films containing fluorescent nanocrystals. It was developed for the publ
 luminescent nanocrystal alignment on fluorescence anisotropy and light guiding in polymer films". One is a script to 
 model fluorescence anisotropy vs true strain data with an exponential model and the other models the same data with a 
 series of linear models.
-\
-\
+
 Please cite "Effect of luminescent nanocrystal alignment on fluorescence anisotropy and light guiding in polymer films"
 when using this tool.
 
 ## Publication Details
 
 Title: "Effect of luminescent nanocrystal alignment on fluorescence anisotropy and light guiding in polymer films"
-\
-\
+
 Authors: Timothy Warner, Michael Rinaudo, Yang Xu, Jiho Han, Arun Ashokan, Nicholas Kirkwood, Asaph Widmer-Cooper, 
 Trevor A. Smith, Kenneth P. Ghiggino*, and Gary Rosengarten
-\
-\
+
 Corresponding Author: Kenneth P. Ghiggino (ghiggino@unimelb.edu.au)
 
 ### Built With
@@ -42,7 +39,7 @@ Corresponding Author: Kenneth P. Ghiggino (ghiggino@unimelb.edu.au)
 ## Features
 
 - Feature 1: Exponential modelling of fluorescence anisotropy vs true strain data.
-- Feature 2: Fit and analyze the same data using a series of linear models.
+- Feature 2: Fit and analyze the same data using a series of linear fits.
 
 ## Getting Started
 
@@ -53,7 +50,7 @@ Corresponding Author: Kenneth P. Ghiggino (ghiggino@unimelb.edu.au)
   - numpy
   - pandas
   - matplotlib
-  - scipy
+  - lmfit
 
 ### Installation
 
@@ -73,8 +70,8 @@ This software is licensed under the MIT License. See LICENSE for more details.
 
 ## Contact
 
-Timothy Warner - warnet2@mcmaster.ca
-GitHub: Timothy-J-Warner
+- Timothy Warner - warnet2@mcmaster.ca
+- GitHub: Timothy-J-Warner
 
 ## Acknowledgements
 
