@@ -14,7 +14,7 @@
 
 ## About The Project
 
-The project contains two scripts used to model the relationship between fluorescence anisotropy and true strain in 
+The project contains two python scripts used to model the relationship between fluorescence anisotropy and true strain in 
 polymer films containing fluorescent nanocrystals. It was developed for the publication "Effect of 
 luminescent nanocrystal alignment on fluorescence anisotropy and light guiding in polymer films". One is a script to 
 model fluorescence anisotropy vs true strain data with an exponential model and the other models the same data with a 
@@ -58,10 +58,11 @@ Access the project and releases on GitHub at https://github.com/Timothy-J-Warner
 
 ## Usage
 
+- (Recommended) Open the software folder in your code editor or IDE of choice, such as Visual Studio Code or PyCharm.
 - Modify the "strain_vs_anisotropy_data.csv" file with your dataset.
 - Choose your model:
   - Run "exponential_model.py" to model exponential relationship.
-  - Run "linear_model.py" to model a series of possible linear relationships.
+  - Run "linear_model.py" to model a series of possible linear fits.
 - View the results in the outputs folders.
 
 ## Licence
