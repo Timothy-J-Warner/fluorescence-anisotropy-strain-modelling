@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.2
+
+- Updated the README.md file.
+
 ## v1.0.1
 
 - Regression method changed from Scipy functions to lmfit functions.
@@ -8,7 +12,7 @@
 - In the linear modelling, changes the colour of the "non-linear region"
 - Changed figure legends
 - Increase the range of values the linear model is used for.
-- Updated the README.md
+- Updated the README.md file.
 
 ## v1.0.0
 
