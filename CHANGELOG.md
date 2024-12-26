@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.3
+
+- Added a version history section to README.md file to differentiate different releases.
+- Added a detailed explanation for the updated exponential model.
+- Updated citation and publication details in README.md.
+- Updated table of contents in README.md.
+
 ## v1.0.2
 
 - Updated the README.md file.
