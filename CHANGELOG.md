@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.1.0
+
+- Updated citation information with final publication metadata.
+- Removed email address from contact information.
+
 ## v1.0.3
 
 - Added a version history section to README.md file to differentiate different releases.
