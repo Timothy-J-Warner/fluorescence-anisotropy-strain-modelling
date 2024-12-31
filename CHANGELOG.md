@@ -2,6 +2,11 @@
 
 ## v1.0.3
 
+- Updated citation information with final publication metadata.
+- Removed email address from contact information.
+
+## v1.0.3
+
 - Added a version history section to README.md file to differentiate different releases.
 - Added a detailed explanation for the updated exponential model.
 - Updated citation and publication details in README.md.

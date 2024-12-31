@@ -22,8 +22,8 @@ model fluorescence anisotropy vs true strain data with an exponential model and 
 series of linear models.
 
 When using this tool, please cite: Warner, T., Rinaudo, M., Xu, Y., Han, J., Ashokan, A., Kirkwood, N., Widmer-Cooper, A., 
-Smith, T. A., Ghiggino, K. P., & Rosengarten, G. (2024). Effect of luminescent nanocrystal alignment on fluorescence 
-anisotropy and light guiding in polymer films. Optical Materials, 116606. https://doi.org/10.1016/j.optmat.2024.116606
+Smith, T. A., Ghiggino, K. P., & Rosengarten, G. (2025). Effect of luminescent nanocrystal alignment on fluorescence 
+anisotropy and light guiding in polymer films. Optical Materials, 159, 116606. https://doi.org/10.1016/j.optmat.2024.116606
 
 ## Publication Details
 
@@ -31,9 +31,11 @@ anisotropy and light guiding in polymer films. Optical Materials, 116606. https:
 - Authors: Timothy Warner, Michael Rinaudo, Yang Xu, Jiho Han, Arun Ashokan, Nicholas Kirkwood, Asaph Widmer-Cooper, 
 Trevor A. Smith, Kenneth P. Ghiggino*, and Gary Rosengarten
 - Corresponding Author: Kenneth P. Ghiggino (ghiggino@unimelb.edu.au)
+- Year: 2025
 - Journal: Optical Materials
-- Volume:
+- Volume: 159
 - Pages: 116606
+- ISSN: 0925-3467
 
 ### Built With
 
@@ -101,7 +103,6 @@ This software is licensed under the MIT License. See LICENSE for more details.
 
 ## Contact
 
-- Timothy Warner - warnet2@mcmaster.ca
 - GitHub: Timothy-J-Warner
 
 ## Acknowledgements
