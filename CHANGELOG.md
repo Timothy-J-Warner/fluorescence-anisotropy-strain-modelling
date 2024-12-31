@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.0.3
+## v1.1.0
 
 - Updated citation information with final publication metadata.
 - Removed email address from contact information.
